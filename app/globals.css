@@ -1,0 +1,318 @@
+* {
+    border: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.signup-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-family: 'Poppins', sans-serif;
+  }
+  
+  .signup-card {
+    background: #fff;
+    padding: 40px 50px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+    width: 90%;
+    max-width: 400px;
+    animation: fadeIn 0.6s ease-in-out;
+    transition: transform 0.3s ease;
+  }
+  
+  .signup-card:hover {
+    transform: translateY(-5px);
+  }
+  
+  /* 🏷️ Title */
+  .signup-title {
+    text-align: center;
+    font-size: 2rem;
+    font-weight: 700;
+    color: #000;
+    margin-bottom: 25px;
+  }
+  
+  /* 📋 Form Elements */
+  .signup-form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .signup-form label {
+    margin-bottom: 8px;
+    color: #333;
+    font-weight: 500;
+  }
+  
+  .signup-form input {
+    padding: 10px 12px;
+    margin-bottom: 18px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 1rem;
+    transition: border 0.3s, box-shadow 0.3s;
+  }
+  
+  .signup-form input:focus {
+    color: #000;
+    box-shadow: 0 0 5px rgba(106, 17, 203, 0.3);
+    outline: none;
+  }
+  
+  /* 🚀 Button */
+  .signup-form button {
+    color: #fff;
+    background-color: #000;
+    font-size: 1rem;
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: background 0.3s, transform 0.2s;
+  }
+  
+  .signup-form button:hover {
+    /* color: #000; */
+    transform: scale(1.03);
+  }
+  
+  /* 💬 Messages */
+  .signup-message {
+    text-align: center;
+    margin-top: 15px;
+    font-weight: 600;
+    font-size: 0.95rem;
+  }
+  
+  .signup-message.success {
+    color: #22c55e; /* Green */
+  }
+  
+  .signup-message.error {
+    color: #ef4444; /* Red */
+  }
+  
+  /* 📎 Footer */
+  .signup-footer {
+    text-align: center;
+    margin-top: 25px;
+    font-size: 0.95rem;
+    color: #555;
+  }
+  
+  .login-link {
+    color: #000;
+    font-weight: 600;
+    text-decoration: none;
+    transition: color 0.3s;
+  }
+  
+  .login-link:hover {
+    color: #000;
+    text-decoration: underline;
+  }
+  
+  /* ✨ Animation */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  /* 📱 Responsive Design */
+  @media (max-width: 480px) {
+    .signup-card {
+      padding: 30px 25px;
+    }
+    .signup-title {
+      font-size: 1.7rem;
+    }
+  }
+  
+
+
+  /* 🌍 CSS Boilerplate / Reset */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  line-height: 1.5;
+  background-color: #fff; /* Black background */
+  color: #fff;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+input,
+button {
+  font-family: inherit;
+  border: none;
+  outline: none;
+}
+
+/* 🪞 Login Container */
+.login-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  padding: 1rem;
+}
+
+/* 📦 Login Card */
+.login-card {
+  background: #fff;
+  color: #000;
+  padding: 40px 50px;
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+  width: 90%;
+  max-width: 400px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  animation: fadeIn 0.6s ease-in-out;
+}
+
+.login-card:hover {
+  transform: translateY(-5px);
+  /* box-shadow: 0 15px 35px rgba(255, 255, 255, 0.15); */
+}
+
+/* 🏷️ Title */
+.login-title {
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 25px;
+  letter-spacing: 0.5px;
+  color: #000;
+}
+
+/* 📋 Form Styling */
+.login-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.login-form label {
+  margin-bottom: 8px;
+  color: #222;
+  font-weight: 500;
+}
+
+.login-form input {
+  padding: 10px 12px;
+  margin-bottom: 18px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  background-color: #f9f9f9;
+}
+
+.login-form input:focus {
+  border-color: #000;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+}
+
+/* 🚀 Button */
+.login-form button {
+  background: #000;
+  color: #fff;
+  font-size: 1rem;
+  padding: 12px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  transition: background 0.3s, transform 0.2s;
+}
+
+.login-form button:hover {
+  background: #333;
+  transform: scale(1.03);
+}
+
+/* 💬 Message */
+.login-message {
+  text-align: center;
+  margin-top: 15px;
+  font-weight: 600;
+  font-size: 0.95rem;
+}
+
+.login-message.success {
+  color: #16a34a; /* green */
+}
+
+.login-message.error {
+  color: #dc2626; /* red */
+}
+
+/* 📎 Footer */
+.login-footer {
+  text-align: center;
+  margin-top: 25px;
+  font-size: 0.95rem;
+  color: #333;
+}
+
+.signup-link {
+  color: #000;
+  font-weight: 600;
+  transition: color 0.3s;
+}
+
+.signup-link:hover {
+  color: #555;
+  text-decoration: underline;
+}
+
+/* ✨ Animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* 📱 Responsive */
+@media (max-width: 480px) {
+  .login-card {
+    padding: 30px 25px;
+  }
+  .login-title {
+    font-size: 1.7rem;
+  }
+}
+
+
+.dash{
+  color: #000;
+}
