@@ -12,7 +12,7 @@ export default function Signup() {
   async function handleCreateAcc(e) {
     e.preventDefault();
     try {
-      const res = await fetch(`${backend_url}/login`, {
+      const res = await fetch(`${backend_url}/signup`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ email: useremail, password: userPass }),
