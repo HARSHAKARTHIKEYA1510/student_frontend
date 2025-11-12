@@ -4,6 +4,7 @@ import Link from "next/link";
 // import "./signup.css";
 
 export default function Signup() {
+  const backend_url = process.env.NEXT_PUBLIC_API_URL
   const [useremail, setEmail] = useState("");
   const [userPass, setPass] = useState("");
   const [message, setMessage] = useState("");
@@ -11,7 +12,7 @@ export default function Signup() {
   async function handleCreateAcc(e) {
     e.preventDefault();
     try {
-      const res = await fetch("http://localhost:4000/signup", {
+      const res = await fetch(`${backend_url}/login`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ email: useremail, password: userPass }),

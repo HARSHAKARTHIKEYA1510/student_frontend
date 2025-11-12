@@ -4,6 +4,7 @@ import { useState } from "react";
 import {useRouter} from "next/navigation"
 
 export default function Login() {
+  const backend_url = process.env.NEXT_PUBLIC_API_URL
   const [userEmail, setEmail] = useState("");
   const [pass, setPass] = useState("");
   const [message, setMessage] = useState("");
@@ -11,7 +12,7 @@ export default function Login() {
   async function handleClick(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
     try {
-      const data = await fetch("http://localhost:4000/login", {
+      const data = await fetch(`${backend_url}/login`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ email: userEmail, password: pass }),
